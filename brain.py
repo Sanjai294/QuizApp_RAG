@@ -1,9 +1,8 @@
-import databutton as db
+
+
 import re
 from io import BytesIO
 from typing import Tuple, List
-import pickle
-
 from langchain.docstore.document import Document
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -61,4 +60,3 @@ def get_index_for_pdf(pdf_files, pdf_names, openai_api_key):
         documents = documents + text_to_docs(text, filename)
     index = docs_to_index(documents, openai_api_key)
     return index
-
