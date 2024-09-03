@@ -1,5 +1,3 @@
-
-
 import re
 from io import BytesIO
 from typing import Tuple, List
