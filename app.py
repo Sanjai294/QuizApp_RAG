@@ -1,10 +1,10 @@
 import streamlit as st
 import os
-from openai import OpenAI
 from dotenv import load_dotenv
-from brain import get_index_for_pdf
+from openai import OpenAI
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
+from brain import get_index_for_pdf  # Import the function from brain.py
 
 # Load environment variables from .env file
 load_dotenv()
@@ -116,3 +116,4 @@ if question:
 
     # Store the updated prompt in the session state
     st.session_state["prompt"] = prompt
+
